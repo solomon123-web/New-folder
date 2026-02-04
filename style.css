@@ -137,7 +137,7 @@ border: 2px solid black;
 }
 
 .img4{
-  height: 20pc;
+  height: 25pc;
   width: 27pc;
   margin-top: 30px;
   margin-bottom: 0%;
@@ -224,16 +224,10 @@ padding-top: 40px;
 }
 
 .section1{
-  background-image: url("Images/CHURCH img1.jpg");
+  background-image: url("Images/solo.png");
   animation-name: example;
   animation-duration: 10s;
-}
-
-@keyframes example {
-  25%  {background-image: url("Images/21e394d4ee13a0e1f2775887ff46d568_fit.jpg");}
-  50%  {background-image: url("Images/bb48bf2b8e22c8a10893aa61999b2ca8_720x480_fit.jpg");}
-  100%  {background-image: url("Images/76e5cdb46d9792d7b2f0ff83548fb9f3_fit.jpg");}
-}     
+}  
 
 .section4{justify-content: center;
 display: flex;
