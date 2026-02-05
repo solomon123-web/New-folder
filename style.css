@@ -19,7 +19,7 @@
   z-index: 50;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  background-color: #555;
+  background-color: #8a8888;
 }
 
 .img1{
@@ -94,7 +94,7 @@ h1{
 }
 
 .but1:hover{
-background-color: #a08686;
+ opacity:0.60;
 color: white;
 }
 

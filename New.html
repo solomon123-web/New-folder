@@ -136,12 +136,69 @@ button:hover{
   padding-top: 50px;
   padding-right: 170px;
 }
-
 .section4{
   display: flex;
   justify-content: center;
   padding-top: 50px;
   padding-right: 215px;
+}
+
+/* Registration form styles */
+.section5{
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 80px 20px;
+}
+.form-container{
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255,255,255,0.95);
+  padding: 20px 24px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.form-row{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.form-group{
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+label{
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #222;
+}
+input[type="text"], input[type="email"], input[type="tel"], select, textarea{
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+textarea{min-height: 100px; resize: vertical}
+.btn-row{
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.btn{
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background: rgb(70, 3, 70);
+  cursor: pointer;
+}
+.btn:hover{background: rgb(128, 10, 128)}
+.btn.secondary{background:#777}
+
+@media (max-width:600px){
+  .h11{font-size:60px; padding:80px}
+  .form-row{flex-direction: column}
 }
 
     </style>
@@ -164,8 +221,6 @@ button:hover{
    </div>
  <section class="section1">
 
-  <!-- <h1 class="h11">Welcome to bride city international church, worship is our <i>culture......</i></h1> -->
-
   <h1 class="h11"><b> Church Membership</b></h1>
 
  </section>
@@ -180,12 +235,13 @@ button:hover{
    understanding of salvation, the nature of God, faith, <br>and Christian living. It helps them discover their <br>identity in Christ and the power of the Holy Spirit.
 
 </p></div>
+<div class="div1">
+<a href="Registerforinperson.html"><button>Register for in-person</button></a></div>
 
-<a href="<div class="div1"><button>Register for in-person</button></div></a>
+<div class="div1">
 
-<a href="<div class="div1">
-<button>Online</button>
-</div></a>
+<a href="Online.html"><button>Online</button></a>
+</div>
 
   </section>
 
@@ -198,7 +254,8 @@ button:hover{
 The purpose of KWM Maturity Training is to <br>adequately equip believers with spiritual maturity, <br>leadership skills, sound moral lifestyle and a <br>deeper understanding of God’s word, enabling <br>them to effectively serve in various departments of <br>the church, ministries and positively impact their <br>communities and generation for God.
 </p></div>
 
-<a href="<div class="div1"><button>Register for in-person</button></div></a>
+<div class="div1">
+<a href="Registerforinperson.html"><button>Register for in-person</button></a></div>
 
 </section>
 
@@ -218,10 +275,80 @@ The purpose of KWM Maturity Training is to <br>adequately equip believers with s
 <h1 class="hiv">Foundation & Maturity Class Registration Form</h1>
 
 <section class="section5">
-<form action="text">
-  
-</form>
+  <div class="form-container" role="region" aria-labelledby="reg-heading">
+    <h2 id="reg-heading" style="text-align:center;margin-bottom:12px;">Register now</h2>
+    <form action="#" method="post" id="regForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullname">Full name *</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="First and last name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+234 800 000 0000">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="birth">Date of birth</label>
+          <input type="date" id="birth" name="birth">
+        </div>
+        <div class="form-group">
+          <label for="classType">Class Applying For *</label>
+          <select id="classType" name="classType" required>
+            <option value="">Select...</option>
+            <option>Foundation Class</option>
+            <option>Maturity Class</option>
+            <option>School of Ministry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mode">Mode *</label>
+          <select id="mode" name="mode" required>
+            <option value="">Select...</option>
+            <option>In-person</option>
+            <option>Online</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex:1 1 100%">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" placeholder="City, State">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex:1 1 100%">
+          <label for="testimony">Brief testimony / Comments</label>
+          <textarea id="testimony" name="testimony" placeholder="Optional"></textarea>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn">Submit registration</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+
+      <p style="margin-top:10px;font-size:13px;color:#444">By submitting you agree to be contacted about your registration. *</p>
+    </form>
+  </div>
 </section>
+
+<script>
+  // Simple client-side submit handler (demo)
+  document.getElementById('regForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thank you for registering! We will contact you soon.');
+    this.reset();
+  });
+</script>
 
 </body>
 </html>
