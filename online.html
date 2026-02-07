@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Worship - Kingdom Worship Ministry</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .online-hero {
+            background-image: url("Images/edwin-andrade-6liebVeAfrY-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 30pc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .online-hero h1 {
+            font-size: 56px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: Cambria, Cochin, Georgia, Times, serif;
+            margin: 0;
+        }
+
+        .live-stream-section {
+            padding: 60px 30px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .live-stream-section h2 {
+            font-size: 42px;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .live-indicator {
+            display: inline-block;
+            background-color: #ff0000;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            aspect-ratio: 16 / 9;
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .stream-info {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .stream-info h3 {
+            color: rgb(163, 137, 88);
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .stream-info p {
+            color: #555;
+            font-size: 16px;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .service-times {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .time-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            border-left: 5px solid rgb(163, 137, 88);
+        }
+
+        .time-card h3 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .time-card p {
+            color: #666;
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .time-label {
+            color: rgb(163, 137, 88);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .connect-section {
+            background-color: rgb(163, 137, 88);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .connect-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .connect-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #fff;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .social-btn:hover {
+            background-color: white;
+            color: rgb(163, 137, 88);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 30px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: rgb(163, 137, 88);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .watch-btn {
+            background-color: rgb(163, 137, 88);
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .watch-btn:hover {
+            opacity: 0.85;
+        }
+
+        @media (max-width: 768px) {
+            .online-hero h1 {
+                font-size: 36px;
+            }
+
+            .live-stream-section h2 {
+                font-size: 28px;
+            }
+
+            .service-times {
+                gap: 15px;
+            }
+
+            .time-card {
+                width: 100%;
+            }
+
+            .connect-section h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="try">
+        <img src="Images/WhatsApp Image 2025-12-30 at 2.36.04 AM.jpeg" alt="Kingdom Worship Ministry Logo" class="img1">
+        <h1><b>KINGDOM WORSHIP MINISTRY</b></h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Sermons.html">SERMONS</a></li>
+                <li><a href="Event.html">EVENTS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="online-hero">
+        <h1>Worship with Us Online</h1>
+    </section>
+
+    <!-- Live Stream Section -->
+    <section class="live-stream-section">
+        <div class="live-indicator">🔴 LIVE NOW</div>
+        <h2>Join Our Live Worship Service</h2>
+        
+        <div class="video-container">
+
+            <!-- KWM live stream URL -->
+            <iframe src="https://www.youtube.com/@BrideCityi-Church" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="stream-info">
+            <h3>📺 How to Connect</h3>
+            <p><strong>Join us live every:</strong></p>
+            <p>✓ Sunday at 9:00 AM - Main Worship Service</p>
+            <p>✓ Wednesday at 5:30 PM - Bible Study & Prayer</p>
+            <p>We also stream past sermons and worship sessions. Subscribe to stay updated on all our online services and never miss a blessing!</p>
+        </div>
+    </section>
+
+    <!-- Service Times -->
+    <section class="live-stream-section">
+        <h2>Service Times & Details</h2>
+        <div class="service-times">
+            <div class="time-card">
+                <h3>Sunday Worship</h3>
+                <p class="time-label">EVERY SUNDAY</p>
+                <p><strong>9:00 AM</strong></p>
+                <p>Join us for our main worship service where we celebrate the presence of God through music, prayer, and the Word.</p>
+                <a href="#"><button class="watch-btn">Join Now</button></a>
+            </div>
+
+            <div class="time-card">
+                <h3>Wednesday Study</h3>
+                <p class="time-label">EVERY WEDNESDAY</p>
+                <p><strong>5:30 PM</strong></p>
+                <p>Deep dive into Scripture through interactive Bible studies and prayer sessions for spiritual growth.</p>
+                <a href="#"><button class="watch-btn">Join Now</button></a>
+            </div>
+
+            <div class="time-card">
+                <h3>24/7 Archive</h3>
+                <p class="time-label">ON DEMAND</p>
+                <p><strong>Anytime</strong></p>
+                <p>Access our complete library of past sermons, worship sessions, and teachings whenever you need them.</p>
+                <a href="Watch Sermons.html"><button class="watch-btn">Browse Archive</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="live-stream-section">
+        <h2>Why Worship Online With Us?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🙏</div>
+                <h3>Spirit-Filled Worship</h3>
+                <p>Experience authentic worship and encounter the presence of the Holy Spirit from anywhere.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Inspiring Messages</h3>
+                <p>Receive powerful messages grounded in Scripture that transform hearts and minds.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Faith Community</h3>
+                <p>Connect with a vibrant community of believers dedicated to worship and spiritual growth.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+                <h3>Flexible Timing</h3>
+                <p>Watch live or access our archive of services at a time that works for you.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Reach</h3>
+                <p>Worship with believers from around the world regardless of geographical boundaries.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💝</div>
+                <h3>Always Welcome</h3>
+                <p>Whether you're new or a longtime worshiper, there's a place for you in our online community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect-section">
+        <h2>Stay Connected</h2>
+        <p>Don't miss out on our worship services and spiritual growth opportunities. Subscribe and follow us on all platforms to receive updates about upcoming services and special events.</p>
+        <div class="social-links">
+            <a href="#" class="social-btn">Subscribe</a>
+            <a href="Contact.html" class="social-btn">Contact Us</a>
+            <a href="Prayer.html" class="social-btn">Prayer Requests</a>
+            <a href="Registernow.html" class="social-btn">Join Our Community</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
