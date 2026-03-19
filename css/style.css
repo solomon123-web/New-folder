@@ -384,7 +384,7 @@ p{
 }
 
 .social{
-  background-image: url(Images/phone.jpg);
+  background-image: url(../Images/phone.jpg);
   background-size: cover;
   width: 100%;
   height: 50pc;
@@ -418,10 +418,13 @@ p{
 }
 
 .plat-pic{
-  width: 160px;
+  width: 140px;
   height: 60px;
   padding-left: 80px;
 }
 
-
+.platforms{
+  text-align: center;
+  padding-left: 130px;
+}
 
