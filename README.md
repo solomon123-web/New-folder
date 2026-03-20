@@ -1,11 +1,11 @@
-# KINGDOM WORSHIP TV - Project Structure
+# KINGDOM WORSHIP - Project Structure
 
 ## 📁 Project Organization
 
 The project has been reorganized with the following structure:
 
 ```
-New folder/
+KINGDOM WORSHIP/
 ├── pages/                    # HTML Pages
 │   ├── Index.html
 │   ├── About.html

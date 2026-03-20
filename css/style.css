@@ -1,32 +1,70 @@
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-.section1{
-  background-image: url("../Images/edwin-andrade-6liebVeAfrY-unsplash.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 40pc;
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #1f2937;
+    background: #f7f9fc;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+.container{ width: min(1100px, 95%); margin: 0 auto; }
+
+.blur{
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 100px !important;
 }
 
 .try{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
   position: sticky;
   top: 0;
   z-index: 50;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  background-color: #8a8888;
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 10px 12px;
+  border-bottom: 1px solid #334155;
 }
+
+.try h1{ margin: 0 16px; font-size: 1.4rem; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+
+img.img1{ height: 70px; width: 70px; border-radius: 999px; object-fit: cover; border: 2px solid #fff; }
+
+nav{ flex: 1; }
+nav ul{ display: flex; flex-wrap: nowrap; justify-content: flex-end; gap: 10px; padding: 8px 0; margin: 0; }
+
+@media (max-width: 900px){
+  .try{ flex-wrap: wrap; }
+  nav ul{ justify-content: center; flex-wrap: wrap; }
+  .try h1{ width: 100%; text-align: center; }
+}
+nav li{ list-style: none; }
+nav a{ padding: 8px 14px; border-radius: 8px; transition: 0.2s; font-weight: 600; color: #e2e8f0; }
+nav a:hover{ background: #1d4ed8; color: #fff; }
+
+.section1{ background-image: url("../Images/solo.png"); background-size: cover; background-position: center; width: 100%; height: 700; margin-top: 0; }
+.hero-content{ width: 100%; margin: 0 auto; text-align: center; background: rgba(255,255,255,0.1); padding: 28px 18px; border-radius: 14px; }
+.h11{ font-family: Cambria, Georgia, serif; font-size: clamp(1.8rem, 4.2vw, 3.8rem); color: #111827; margin-bottom: 18px; }
+.but1{ border: none; border-radius: 8px; background: #1d4ed8; color: #fff; font-size: 1rem; font-weight: 700; padding: 12px 18px; cursor: pointer; }
+.but1:hover{ transform: translateY(-1px); background: #2563eb; }
+
+.section2{ margin: 24px auto; width: min(1100px, 95%); }
 
 .img1{
   height: 100px;
   width: 100px;
   border-radius: 10pc;
-margin: 10px; 
+  margin: 10px; 
 }
 
 nav{
@@ -72,45 +110,25 @@ h1{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.h11{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: center;
-  font-size: 70px;
-  padding: 100px;
-  color: black;
-  padding-top: 10pc;
-}
+.h11{ font-family: Cambria, Georgia, serif; text-align: center; font-size: clamp(1.8rem, 5vw, 3.8rem); color: #111827; margin: 0; }
+.but1{ border: none; border-radius: 10px; padding: 12px 20px; background: #1d4ed8; color: white; font-size: 1rem; cursor: pointer; margin-top: 14px; }
+.but1:hover{ opacity: 0.9; transform: translateY(-1px); }
 
-.but1{
-  text-align: center;
-  margin-left: 45pc;
-  font-size: 30px;
-  color: black;
-  background-color: rgb(163, 137, 88);
-  margin-bottom: 30px;
-  border-radius: 10px;
-  height: 60px;
-  width: 250px;
-}
+.h111{ font-size: 2.2rem; color: #0f172a; text-align: left; margin: 0 0 12px; }
+.p1{ font-size: 1rem; color: #334155; line-height: 1.65; margin-bottom: 12px; padding-left: 0; }
 
-.but1:hover{
- opacity:0.60;
-color: white;
-}
+.section2{ display: flex; flex-wrap: wrap; gap: 16px; background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.about-card{ flex: 1 1 320px; min-width: 320px; }
+.about-image{ flex: 1 1 280px; }
+.div3{ flex: 1 1 280px; }
 
-.h111{
-  font-size: 43px;
-  color: black;
-  text-shadow: none;
-  text-align: center;
-  margin-top: 50px;
-}
+.img4, .img2{ width: 100%; object-fit: cover; border-radius: 10px; }
+.img4{ height: 300px; }
+.img2{ height: 300px; }
 
-.p1{
-  font-size: 23px;
-  padding-left: 78px;
-  margin-top: 30px;
-  color: black;
+@media (max-width: 980px){
+  .section2{ flex-direction: column; }
+  .h11{ font-size: 2rem; }
 }
 
 .img2{
@@ -132,17 +150,88 @@ border: 2px solid black;
 
 .section2{
   display: flex;
-  padding-left: 15px;
-  margin: 60px;
-  padding-bottom: 50px;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.about-card{
+  flex: 1 1 360px;
+  padding: 12px;
+}
+
+.about-card .h111{
+  text-align: left;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  text-shadow: none;
+}
+
+.about-card .p1{
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 12px;
+  padding-left: 0;
+}
+
+.about-card .but2{
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 18px;
+  font-weight: bold;
+}
+
+.about-card .but2:hover{ opacity: 0.9; }
+
+.about-image{
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .img4{
-  height: 25pc;
-  width: 27pc;
-  margin-top: 30px;
-  margin-bottom: 0%;
-  box-shadow: 10px 10px 10px 10px rgb(231, 231, 231);
+  height: 350px;
+  width: 100%;
+  max-width: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-top: 95px;
+}
+
+.div3{
+  flex: 1 1 330px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.img2{
+  height: 350px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 980px){
+  .section2{
+    flex-direction: column;
+    margin: 20px;
+  }
+  .about-card .h111{ font-size: 32px; }
+  .h11{ font-size: 46px; padding: 60px 20px; }
 }
 
 .but2{
@@ -196,14 +285,16 @@ padding-top: 40px;
   height: 30pc;
   width: 36.5pc;
   margin-left: 14pc;
-  margin-top: 0%;   
+  margin-top: 0%; 
+  border-radius: 10px;  
 }
 
 .img7{
    height: 30pc;
-   width: 40pc; 
+   width: 36pc; 
    margin-top: 0%;
-   padding-left: 70px;     
+   margin-left: 70px;     
+   border-radius: 10px;
 }
 
 .hv{
@@ -387,7 +478,7 @@ p{
   background-image: url(../Images/phone.jpg);
   background-size: cover;
   width: 100%;
-  height: 50pc;
+  height: 55pc;
   margin-top: 70px;
 }
 
